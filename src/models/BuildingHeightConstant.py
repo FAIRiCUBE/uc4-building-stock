@@ -75,15 +75,32 @@ if __name__ == '__main__':
     data['height'] = data['height'].str.replace(',', '.')
     data['height'] = data['height'].str.replace('~', '')
     data['height'] = data['height'].str.replace('m', '').astype(float)
-    #data['LevelHeight'] = data['height'] / data['building:levels']
+    
+    #For some countries ground floor = 0
+    data['building:levels'] = data['building:levels'] + 1
+    #LevelHeight computing
+    data['LevelHeight'] = data['height'] / data['building:levels']
 
-
+    #First constant: Compute height using the mean as constant
+    data['heightComputed'] = data['building:levels'] * data['LevelHeight'].mean()
+    data['Distance'] = abs(data['height'] - data['heightComputed'])
+    data['Distance*2'] = (data['height'] - data['heightComputed']) ** 2
+    subData = data[~data['Distance'].isna()]
+    print('------------------------*MEAN-----------------------------')
+    error = subData['Distance'].sum() / len(subData)
+    error2 = math.sqrt(subData['Distance*2'].sum() / len(subData))
+    print('Constant: ', data['LevelHeight'].mean(), 'm')
+    print('MAE: ', error, 'm')
+    print('RMSE: ', error2, 'm')
+    print('Min: ', subData['Distance'].min())
+    print('Max: ', subData['Distance'].max())
 
     #Height = Constant* Building:levels
     constant = 2.4
-    Optconstant = constant
-    OptError = 999
-    OptError2 = 999
+    Optconstant = data['LevelHeight'].mean()
+    OptError = error
+    OptError2 = error2
+
     # Try 20 constants and select the one that yields the best Mean Absolute Error
     for i in range(20):
         print('-------------------------', constant, 'm----------------------------')
