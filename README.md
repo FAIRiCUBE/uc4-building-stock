@@ -6,7 +6,7 @@ Buildings are responsible for about 40% and 36% of energy demand and greenhouse 
 
 Ensuring that the EU’s climate and energy objectives are achievable and the inventory of in-use building materials are correctly mapped, requires a sufficient knowledge of the properties of our built environment. However, what one can often find is a mix of detailed and generic data. For newly built buildings, due to current intensive regulative codes (particularly in the EU), a prominent level of clarity is demanded giving the possibility to understand the properties of assets. However, for older buildings, a detailed level of clarity is often scarce until assets are (deeply) refurbished, rehabilitated, or inspected. This mixed level of insights on the properties of buildings constrains the possibility of making decisions at the national level to prioritize dwellings with the highest return on investments and promotion of circular and local materials.
 
-The main objective of UC 4 is to develop models based on data compliant with the F.A.I.R-data definition to estimate (a) material use intensity and energy performance and (b) associated greenhouse gas emissions of building stocks (LOD2 or above).
+The main objective of UC4 is to develop models based on data compliant with the F.A.I.R-data definition to estimate (a) material use intensity and energy performance and (b) associated greenhouse gas emissions of building stocks.
 
 ## Research questions
 The following research questions strive to reach the UC4 objectives:
