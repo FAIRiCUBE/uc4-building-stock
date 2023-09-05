@@ -9,7 +9,7 @@ Ensuring that the EU’s climate and energy objectives are achievable and the in
 Within this context the primary goal of UC4 is to gain a deeper knowledge on the energy and environmental performance of buildings, as well as in-use of natural resources. The gained knowledge will also reflect on three of Green Deal Action Plans which are connected to sustainability performance of buildings: (1) circular economy, (2) climate neutrality, and (3) renovation wave. The objectives of this use case are twofold. Firstly, developing and documenting models based on data compliant with the F.A.I.R-data definition to estimate (a) material use intensity and energy performance and (b) associated greenhouse gas emissions of building stocks. Secondly, mapping the building estimates on a datacube structure. 
 
 ## Research questions
-The following research questions strive to reach the UC4 objectives:
+The following research questions strive to reach UC4's objectives:
 
 + How can the inconsistency of data availability across European cities be enhanced by machine learning models? And what independent variables are rudimentary for training the models?
 + To what extent can data cube infrastructure support actors, researchers, stakeholders, etc. to tackle the Green Deal priority action plans related to climate change, renovation wave, and circular economy?
