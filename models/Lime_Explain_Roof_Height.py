@@ -23,7 +23,7 @@ base_model = VGG16(weights='imagenet', include_top=False, input_shape=(224, 224,
 base_model.trainable = False  # Ensure the base model is not trainable
 
 # Load the saved XGBoost model
-xgb_regressor = joblib.load('xgb_regressor.pkl')
+xgb_regressor = joblib.load('xgb_regressor_NEW.pkl')
 
 # Function to predict using the XGBoost model
 def predict_fn(images):
@@ -62,15 +62,15 @@ def plot_lime_explanation(image_path, model, base_model, image_size, save_path, 
     plt.show()
 
 # Load the data
-data_path = '../data/Vienna/modelling_results/building_3d_Roofs_2.csv'
-images_folder = '../data/Vienna/modelling_results/masked_orthophoto'
+data_path = 'buildings_rooftops.csv'
+images_folder = 'masked_orthophoto'
 df = pd.read_csv(data_path)
 
 # Filter out outliers (roof heights of more than 15 meters)
-df = df[(df['roof_height'] >= 1) & (df['roof_height'] <= 25)]
+df = df[(df['roof_height'] <= 8)]
 
 # Randomly select image paths from df['object_id']
-num_samples = 3  # Number of images to randomly select
+num_samples = 20  # Number of images to randomly select
 selected_objects = df['object_id'].sample(num_samples).tolist()
 
 # Construct image paths and actual values
