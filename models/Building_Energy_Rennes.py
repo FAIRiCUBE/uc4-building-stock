@@ -13,7 +13,7 @@ import pandas as pd
 import seaborn as sns
 
 # Define database and table
-sqlite_file_path = "rennes_building_shared-wall_v2.sqlite"
+sqlite_file_path = "Rennes_buildings.sqlite"
 table_name = "rennes_building_shared_wall_v2"
 
 # Connect to the database and load the table into a DataFrame
