@@ -5,7 +5,7 @@ import xgboost as xgb
 import numpy as np
 
 # Load dataset
-file_path = "oslo_building.csv"  # Change this to your local file path
+file_path = "Oslo_buildings.csv"  # Change this to your local file path
 df = pd.read_csv(file_path)
 
 # Define features and target variable
