@@ -8,7 +8,7 @@ import pandas as pd
 import seaborn as sns
 
 # Load dataset
-file_path = "plot_Barcelona.csv"  # Change this to your local file path
+file_path = "Barcelona_buildings.csv"  # Change this to your local file path
 df = pd.read_csv(file_path)
 df = df[df['year'] == 2020]
 
